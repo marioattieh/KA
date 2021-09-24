@@ -1,0 +1,11 @@
+.header-home {
+  min-height: 520px;
+  min-width: 100%;
+  background-image: url("../../Assets/Images/KA.jpg");
+  background-size: cover;
+}
+
+.links-home {
+  display: flex;
+  flex-direction: row;
+}
