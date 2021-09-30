@@ -1,0 +1,122 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 40px;
+}
+
+.about-1,
+.about-4 {
+  margin: auto;
+  max-width: 1150px;
+  margin-bottom: 90px;
+}
+
+.about-2,
+.about-3 {
+  margin: auto;
+  max-width: 1150px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 90px;
+  justify-content: space-between;
+}
+
+.about-1 h1,
+.about-2 h1,
+.about-3 h1,
+.about-4 h1 {
+  font-weight: normal;
+  font-size: 34pt;
+  color: #155934;
+}
+
+.about-1 p,
+.about-2 p,
+.about-3 p {
+  font-weight: lighter;
+  font-size: 18pt;
+  line-height: 1.38;
+  text-indent: 15pt;
+  text-align: justify;
+  margin-top: 35px;
+  vertical-align: baseline;
+  white-space: normal;
+}
+
+.about-2 div:nth-child(1),
+.about-3 div:nth-child(1) {
+  width: 60%;
+}
+
+.about-2 div:nth-child(2) {
+  background-image: url("../../Assets/Images/KA1.png");
+  min-width: 30%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.about-3 div:nth-child(2) {
+  background-image: url("../../Assets/Images/KA2.png");
+  min-width: 30%;
+  min-height: 350px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.about-4 h2 {
+  font-weight: normal;
+  font-size: 20pt;
+  color: #155934;
+  text-decoration: underline;
+  margin-top: 35px;
+}
+
+.about-4 p {
+  font-weight: lighter;
+  font-size: 16pt;
+  text-align: justify;
+  margin-top: 10px;
+  vertical-align: baseline;
+  white-space: normal;
+}
+
+@media (max-width: 1150px) {
+  .about-1,
+  .about-2,
+  .about-3,
+  .about-4 {
+    margin: 0 20px 50px 20px;
+  }
+  .about-1 p,
+  .about-2 p,
+  .about-3 p,
+  .about-4 p {
+    font-weight: normal;
+  }
+  .about-2,
+  .about-3 {
+    flex-direction: column;
+  }
+  .about-2 div:nth-child(1),
+  .about-3 div:nth-child(1) {
+    width: 100%;
+  }
+  .about-2 div:nth-child(2) {
+    background-image: url("../../Assets/Images/KA1.png");
+    min-width: 100%;
+    min-height: 240px;
+    margin-top: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .about-3 div:nth-child(2) {
+    background-image: url("../../Assets/Images/KA2.png");
+    min-width: 100%;
+    min-height: 240px;
+    margin-top: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

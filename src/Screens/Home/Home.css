@@ -1,11 +1,283 @@
 .header-home {
   min-height: 520px;
-  min-width: 100%;
+  max-height: 520px;
   background-image: url("../../Assets/Images/KA.jpg");
-  background-size: cover;
+  background-size: 100% 100%;
+  transition: all 0.1s ease-in-out;
 }
 
 .links-home {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
+  min-height: 84px;
+  background-color: #ececec;
+  align-items: center;
+  justify-content: center;
+}
+
+.body-home {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.container-home {
+  position: relative;
+  user-select: none;
+}
+
+.link,
+.link-sel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 168px;
+  min-height: 35px;
+  border: 1px solid #155934;
+  color: white;
+  background-color: #155934;
+  border-radius: 5px;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  margin-left: 16px;
+  margin-right: 16px;
+  font-family: "Ubuntu-Regular";
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.link-sel {
+  background-color: transparent;
+  color: #155934;
+}
+
+.link-sel:hover {
+  background-color: rgba(21, 89, 52, 0.1);
+}
+
+.link:hover {
+  box-shadow: 0 0 5px #155934;
+}
+
+.top-home,
+.top-home-active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 40px;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  z-index: 10;
+}
+
+.top-home-active {
+  background-color: #212121;
+}
+
+.top-home h2,
+.top-home-active h2 {
+  font-weight: 320;
+  margin-left: 30px;
+  margin-bottom: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-home {
+  display: none;
+}
+
+.footer-home {
+  display: flex;
+  min-height: 250px;
+  min-width: 100%;
+  background-color: #155934;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.left-foot {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-foot div {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-foot h1 {
+  color: white;
+  font-weight: 200;
+  font-size: 50px;
+}
+
+.left-foot h2,
+.email-link {
+  margin-top: 10px;
+  color: white;
+  font-weight: 200;
+  font-size: 25px;
+}
+
+.right-foot {
+  display: flex;
+  flex-direction: row;
+}
+
+.right-foot div {
+  background-image: url("../../Assets/Images/Insta.png");
+  height: 48px;
+  width: 48px;
+  cursor: pointer;
+}
+
+.right-foot svg {
+  transform: scale(1.2);
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.float-home-active {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  height: 45px;
+  width: 45px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+  font-family: "Courier New", Courier, monospace;
+  padding-top: 20px;
+  z-index: 15;
+}
+
+.float-home {
+  display: none;
+}
+
+.sidebar-home {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 45vw;
+  background-color: #1b7443;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 12;
+}
+
+.side-link {
+  height: 8vh;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  line-height: 8vh;
+}
+
+.sel-side-link {
+  height: 8vh;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  line-height: 8vh;
+}
+
+.menu-sidebar-home {
+  display: flex;
+  justify-content: space-between;
+  transform: scale(0.8);
+  height: 8vh;
+  line-height: 8vh;
+}
+
+.menu-sidebar-home h2 {
+  color: white;
+}
+
+.menu-sidebar-home svg path {
+  fill: white;
+}
+
+.menu-sidebar-home svg {
+  cursor: pointer;
+  margin: auto 0 auto 0;
+}
+
+@media (max-width: 750px) {
+  .header-home {
+    min-height: 260px;
+    max-height: 260px;
+  }
+  .top-home h2,
+  .top-home-active h2 {
+    font-size: medium;
+    margin-left: 10px;
+    margin-bottom: 2px;
+  }
+  .links-home {
+    display: none;
+  }
+  .menu-home {
+    display: block;
+    margin-left: 10px;
+    transform: scale(0.8);
+    cursor: pointer;
+  }
+  .menu-home svg path {
+    fill: white;
+  }
+
+  .right-foot {
+    flex-direction: column;
+  }
+  .right-foot svg {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .float-home-active {
+    display: none;
+  }
+  .left-foot h2,
+  .email-link {
+    margin-top: 10px;
+    color: white;
+    font-weight: 200;
+    font-size: 18px;
+  }
+  .right-foot svg {
+    transform: scale(1);
+  }
+  .right-foot div {
+    transform: scale(0.83);
+  }
+}
+
+@keyframes slide-in {
+  to {
+    width: 0;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    width: 0;
+  }
+  to {
+    width: 45vw;
+  }
 }

@@ -1,4 +1,24 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Ubuntu-Regular";
+  src: local("Ubuntu-Regular"), url(./Assets/Fonts/Ubuntu-Regular.ttf);
+  font-display: block;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(21, 89, 52, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(21, 89, 52, 0.7);
 }
