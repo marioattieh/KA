@@ -8,8 +8,8 @@ import { AnimatePresence } from "framer-motion";
 const Home = () => {
   const location = useLocation().pathname;
   const loc = useLocation();
-  const [scroll, setScroll] = useState(0);
-  const [float, setfloat] = useState(0);
+  const [scroll, setScroll] = useState(true);
+  const [float, setfloat] = useState(true);
   const [open, setOpen] = useState(false);
   const [first, setFirst] = useState(true);
   const slideIn = { animation: "slide-in 300ms forwards" };
@@ -176,9 +176,9 @@ const Home = () => {
           <Switch location={loc} key={location}>
             <Route exact path="/" component={About} />
             <Route path="/projects" component={Projects} />
-            <Route path="/media" />
-            <Route path="/hse" />
-            <Route path="/sponsors" />
+            <Route path="/media" component={About} />
+            <Route path="/hse" component={About} />
+            <Route path="/sponsors" component={About} />
           </Switch>
         </AnimatePresence>
       </div>
